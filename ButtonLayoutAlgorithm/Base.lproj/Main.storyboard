@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4A-Oh-OYE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="按钮布局算法">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="139" y="285" width="122" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="popLayoutViewController:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DuM-V0-rT2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="按钮个数" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dti-aR-lUL">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="152" y="198" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="按钮间距" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R32-Wz-bYl">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="go"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="152" y="132" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="R32-Wz-bYl" secondAttribute="centerX" id="EQp-Vj-EUQ"/>
+                            <constraint firstAttribute="centerY" secondItem="w4A-Oh-OYE" secondAttribute="centerY" id="SfO-po-RL4"/>
+                            <constraint firstAttribute="centerY" secondItem="Dti-aR-lUL" secondAttribute="centerY" constant="87" id="ce5-hJ-1bI"/>
+                            <constraint firstAttribute="centerX" secondItem="w4A-Oh-OYE" secondAttribute="centerX" id="hTf-no-P35"/>
+                            <constraint firstAttribute="centerY" secondItem="R32-Wz-bYl" secondAttribute="centerY" constant="153" id="j0e-iT-ipV"/>
+                            <constraint firstAttribute="centerX" secondItem="Dti-aR-lUL" secondAttribute="centerX" id="kAx-dm-2Qw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="w4A-Oh-OYE"/>
+                                <exclude reference="Dti-aR-lUL"/>
+                                <exclude reference="R32-Wz-bYl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EQp-Vj-EUQ"/>
+                                <exclude reference="j0e-iT-ipV"/>
+                                <exclude reference="ce5-hJ-1bI"/>
+                                <exclude reference="kAx-dm-2Qw"/>
+                                <exclude reference="SfO-po-RL4"/>
+                                <exclude reference="hTf-no-P35"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="w4A-Oh-OYE"/>
+                                <include reference="Dti-aR-lUL"/>
+                                <include reference="R32-Wz-bYl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EQp-Vj-EUQ"/>
+                                <include reference="j0e-iT-ipV"/>
+                                <include reference="ce5-hJ-1bI"/>
+                                <include reference="kAx-dm-2Qw"/>
+                                <include reference="SfO-po-RL4"/>
+                                <include reference="hTf-no-P35"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="countTextFiled" destination="Dti-aR-lUL" id="BbU-GZ-Bzg"/>
+                        <outlet property="spaceTextField" destination="R32-Wz-bYl" id="xwY-3r-y0f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="429"/>
+        </scene>
+    </scenes>
+</document>
